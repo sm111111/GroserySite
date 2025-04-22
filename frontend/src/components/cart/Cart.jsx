@@ -43,7 +43,7 @@ const Cart = () => {
                 return;
             }
 
-            const res = await axios.delete(`http://localhost:5000/cart/cartD/${productId}`, {
+            const res = await axios.delete(`https://groserysite.onrender.com/cart/cartD/${productId}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
 

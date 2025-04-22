@@ -23,7 +23,7 @@ const Main = () => {
     const fetchProductData = async () => {
         try {
             if (!id) return;
-            const res = await axios.get(`http://localhost:5000/api/mains/${id}`);
+            const res = await axios.get(`https://groserysite.onrender.com/api/mains/${id}`);
 
             if (res.status === 200 || res.status === 201) {
                 setGetMain(res.data.data || res.data);
@@ -55,7 +55,7 @@ const Main = () => {
             });
 
             const res = await axios.post(
-                `http://localhost:5000/cart/select`,
+                `https://groserysite.onrender.com/cart/select`,
                 {
                     productId: id,
                     name: getMain?.product_name,
@@ -83,7 +83,7 @@ const Main = () => {
 
     const datafetch = async () => {
         try {
-            const res = await axios.get('http://localhost:5000/api/allproduct');
+            const res = await axios.get('https://groserysite.onrender.com/api/allproduct');
             console.log("Received data:", res.data);
             if (res.status === 200 || res.status === 201) {
                 setMaininfo(res.data.data);

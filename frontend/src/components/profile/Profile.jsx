@@ -16,7 +16,7 @@ const Profile = () => {
             }
 
             try {
-                const res = await axios.get("http://localhost:5000/auth/profile", {
+                const res = await axios.get("https://groserysite.onrender.com/auth/profile", {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 setUser(res.data);

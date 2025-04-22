@@ -17,7 +17,7 @@ const Signup = () => {
         e.preventDefault();
 
         try {
-            const res = await axios.post('http://localhost:5000/auth/signup', getSignUp)
+            const res = await axios.post('https://groserysite.onrender.com/auth/signup', getSignUp)
             if (res.status === 200 || res.status === 201) {
                 setGetSignUp({ name: '', email: '', password: '' })
                 toast.success("SignUp Succesfully")

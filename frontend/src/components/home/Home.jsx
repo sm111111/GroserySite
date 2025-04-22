@@ -12,7 +12,7 @@ const Home = () => {
 
     const datafetch = async () => {
         try {
-            const res = await axios.get('http://localhost:5000/api/allproduct');
+            const res = await axios.get('https://groserysite.onrender.com/api/allproduct');
             console.log("Received data:", res.data);
             if (res.status === 200 || res.status === 201) {
                 setHomeInfo(res.data.data);
