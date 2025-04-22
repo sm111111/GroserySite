@@ -1,0 +1,116 @@
+@import url('../assets/css/styles.css');
+
+.Filter-container {
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    font-family: var(--font-family);
+    padding: 70px 0px;
+}
+
+.leftSide-Filter {
+    flex: 200px 0 0;
+    background: var(--second-hover);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.leftSide-Filter>h1 {
+    font-size: 1rem;
+    text-transform: capitalize;
+    margin: 10px;
+    text-align: center;
+    color: var(--dark-color);
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftSide-Filter>h1>p {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.leftSide-Filter>h1>p:hover {
+    color: var(--prime-color);
+}
+
+
+.insideLeft-wrapper {
+    padding: 0px 20px;
+    display: flex;
+    /* justify-content: flex-start;
+    align-items: center; */
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.insideLeft-wrapper .select-product {
+    display: flex;
+    gap: 20px;
+    font-size: 0.9rem;
+
+
+}
+
+
+.rightSide-Filter {
+    flex: 1;
+    /* background: rgb(113, 240, 233); */
+    padding: 10px;
+    overflow-y: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.rightSide-Filter .inside-rightSide-Filter {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.showFillter-icon {
+    font-size: 2rem;
+    /* margin: 5px; */
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.showFillter-icon:hover {
+    color: var(--prime-color);
+}
+
+
+
+@media (max-width:700px) {
+    .leftSide-Filter {
+        display: none;
+    }
+
+    .rightSide-Filter .inside-rightSide-Filter {
+        /* display: flex;
+        flex-wrap: wrap; */
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+}

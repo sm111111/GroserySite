@@ -1,0 +1,181 @@
+@import url('../assets/css/styles.css');
+
+
+.Navbar-container {
+    width: 100%;
+    background: var(--prime-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    z-index: 1;
+}
+
+.navbar-logo {
+    color: var(--second-hover);
+}
+
+
+
+.all-navbar-link {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    text-transform: capitalize;
+
+}
+
+
+.others-tools {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.navlink-navbar {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--second-hover);
+    border-bottom: 2px solid transparent;
+    transition: 0.4s ease-in-out;
+    padding-top: 5px;
+}
+
+.navlink-navbar:focus {
+    color: var(--second-hover);
+}
+
+.navlink-navbar:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    top: 0;
+    height: 2px;
+    background: var(--dark-color);
+    transition: width 0.3s ease-in-out;
+}
+
+.navlink-navbar:hover:after {
+    width: 100%;
+
+}
+
+
+.outer-layour-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--second-hover);
+    padding: 10px;
+    color: var(--dark-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    text-decoration: none;
+    border: 2px solid transparent;
+
+}
+
+.outer-layour-icons:hover {
+    background: var(--prime-color);
+    color: var(--second-hover);
+    border: 2px solid var(--dark-color);
+    transform: scale(1.2);
+}
+
+.phone-view {
+    display: none;
+}
+
+.searchHere {
+    background: var(--second-hover);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 10px;
+    font-size: 1rem;
+    color: var(--dark-color);
+    font-weight: 700;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.searchHere>input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.showAllphone {
+    display: none;
+    gap: 10px;
+}
+
+@media (max-width:700px) {
+
+    .all-navbar-link,
+    .others-tools {
+        display: none;
+    }
+
+    .others-tools {
+        flex-direction: row;
+        backdrop-filter: blur(10px);
+        padding: 20px;
+    }
+
+    .showAllphone {
+        display: flex;
+    }
+
+    .others-tools.navshow {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        transition: 0.3s ease-in-out;
+        animation: show 0.4s ease-in-out;
+        position: absolute;
+    }
+
+    @keyframes show {
+        0% {
+            opacity: 0;
+            transform: translateY(10px);
+
+        }
+
+        100% {
+            opacity: 10;
+
+        }
+    }
+
+
+
+
+
+    .phone-view {
+        display: flex;
+        font-size: 2rem;
+        color: var(--dark-color);
+    }
+
+    .phone-view:hover {
+        color: var(--second-hover);
+    }
+}

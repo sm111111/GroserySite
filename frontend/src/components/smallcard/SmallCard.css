@@ -1,0 +1,83 @@
+@import url('../assets//css/styles.css');
+
+.SmallCard {
+    width: 200px;
+    height: 280px;
+    background: var(--second-hover);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: background 0.2s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    font-family: var(--font-family);
+    margin: 10px;
+}
+
+.SmallCard::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background: var(--dark-color);
+    transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+
+}
+
+.SmallCard:hover {
+    background: rgba(0, 0, 0, 0.10);
+}
+
+.SmallCard:hover::after {
+    width: 100%;
+    left: 0;
+    background: var(--prime-color);
+
+}
+
+
+
+
+
+
+.SmallCard .small-img {
+    width: 100%;
+    padding: 20px;
+    /* background: #797272; */
+}
+
+.SmallCard .small-img>img {
+    width: 100%;
+}
+
+.small-name-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+
+
+
+.small-name-price>p:nth-child(2) {
+    color: var(--prime-color);
+}
+
+
+@media (max-width:700px) {
+    .SmallCard {
+        width: 120px;
+        height: 180px;
+    }
+}

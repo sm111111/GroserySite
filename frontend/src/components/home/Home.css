@@ -1,0 +1,11 @@
+.Home-container {
+    width: 100%;
+}
+
+.Home-container>section {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

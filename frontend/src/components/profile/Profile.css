@@ -1,0 +1,37 @@
+@import url('../assets/css/styles.css');
+
+.profile-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.inside-profile {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: var(--dark-color);
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--second-hover);
+}
+
+.inside-profile .pro>button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: var(--prime-color);
+    color: var(--second-hover);
+}
+
+.inside-profile .pro>button:hover {
+    background: var(--second-color);
+}

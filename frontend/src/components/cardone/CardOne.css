@@ -1,0 +1,78 @@
+@import url('../assets/css/styles.css');
+
+.CardOne-container {
+    width: fit-content;
+    background: var(--grey-color);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.2s ease-in-out;
+    font-family: var(--font-family);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+}
+
+.CardOne-container:hover {
+    transform: scale(1.04);
+}
+
+
+.CardOne-container .product-img {
+    width: 240px;
+    height: 150px;
+    padding: 10px;
+    /* background: #000; */
+    border-radius: 10px;
+    border: 2px solid var(--prime-color);
+}
+
+.CardOne-container .product-img:hover {
+    border: 2px solid var(--dark-color);
+}
+
+.CardOne-container .product-img>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.product-name-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.CardOne-container>button {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: capitalize;
+    background: var(--second-color);
+    color: var(--grey-color);
+}
+
+.CardOne-container>button:hover {
+    background: var(--prime-color);
+
+}
+
+
+@media (max-width:700px) {
+    .CardOne-container .product-img {
+        width: 120px;
+        flex-wrap: wrap;
+
+    }
+}

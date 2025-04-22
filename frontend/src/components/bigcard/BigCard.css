@@ -1,0 +1,79 @@
+.BigCard-container {
+    width: 100%;
+    max-width: 100%;
+    background: var(--prime-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: var(--font-family);
+    box-sizing: border-box;
+
+}
+
+.bigcard-info {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bigcard-info>span {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--second-hover);
+}
+
+.bigcard-info>button {
+    border: none;
+    padding: 10px;
+    width: fit-content;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+    font-family: var(--font-family);
+    color: var(--second-hover);
+    background: var(--dark-color);
+}
+
+.bigcard-info>button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.big-img {
+    width: 300px;
+    max-width: 100%;
+    /* Ensures it doesn't overflow */
+}
+
+.BigCard-container .big-img>img {
+    width: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 700px) {
+    .BigCard-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bigcard-info {
+        align-items: center;
+    }
+
+    .bigcard-info>span {
+        font-size: 1.5rem;
+    }
+
+    .bigcard-info>button {
+        font-size: 1rem;
+    }
+
+    .big-img {
+        width: 80%;
+    }
+}

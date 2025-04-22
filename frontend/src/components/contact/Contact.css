@@ -1,0 +1,141 @@
+@import url('../assets/css/styles.css');
+
+.Contact-container {
+    width: 100%;
+    padding: 100px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family);
+}
+
+.inside-contact {
+    width: 80%;
+    max-width: 1200px;
+    background: var(--prime-color);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+/* Left Side (Image) */
+.leftside-Contact {
+    width: 50%;
+    padding: 10px;
+}
+
+.leftside-Contact img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Right Side (Form & Info) */
+.rigthside-Contact {
+    width: 50%;
+    background: var(--second-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--second-hover);
+    padding: 20px;
+}
+
+.inside-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Form Inputs */
+.input-area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.input-area input,
+.inside-wrapper textarea {
+    padding: 12px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.input-area input:focus,
+.inside-wrapper textarea:focus {
+    border: 2px solid var(--dark-color);
+}
+
+.inside-wrapper textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Button */
+.inside-wrapper button {
+    padding: 12px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    background: var(--dark-color);
+    color: var(--second-hover);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.inside-wrapper button:hover {
+    background: var(--prime-color);
+}
+
+/* Contact Details */
+.insideBottom-contact {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1.2rem;
+}
+
+.insideBottom-contact p {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.icons-contacts {
+    font-size: 1.8rem;
+    color: var(--dark-color);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 900px) {
+    .inside-contact {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .leftside-Contact,
+    .rigthside-Contact {
+        width: 100%;
+    }
+
+    .input-area {
+        grid-template-columns: 1fr;
+    }
+
+    .insideBottom-contact {
+        font-size: 0.8rem;
+        width: 100%;
+    }
+}
